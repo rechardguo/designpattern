@@ -1,4 +1,4 @@
-package rechard.learn.decorater;
+package rechard.learn.designpattern.decorater;
 
 public class Suggar extends CondimentDecorator{
 
