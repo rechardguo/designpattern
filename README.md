@@ -6,3 +6,5 @@
 #### [工厂模式(factory Pattern)](https://github.com/rechardguo/designpattern/tree/master/src/main/java/rechard/learn/designpattern/factory)
 #### [观察者模式(observer Pattern)](https://github.com/rechardguo/designpattern/tree/master/src/main/java/rechard/learn/designpattern/observer)
 #### [策略模式(strategy Pattern)](https://github.com/rechardguo/designpattern/tree/master/src/main/java/rechard/learn/designpattern/strategy)
+
+#### 迭代器模式

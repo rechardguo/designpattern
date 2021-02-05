@@ -1,10 +1,5 @@
 package rechard.learn.designpattern.simplefactory;
 
-import rechard.learn.designpattern.factory.Apple;
-import rechard.learn.designpattern.factory.Bananer;
-import rechard.learn.designpattern.factory.Fruit;
-import rechard.learn.designpattern.factory.Orange;
-
 public class FruitFactory {
 
 	public Fruit getFruit(String name){
