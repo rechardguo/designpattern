@@ -1,5 +1,7 @@
 package rechard.learn.eshop;
 
+import rechard.learn.eshop.asyn.OfflineMessageStorageMananger;
+import rechard.learn.eshop.asyn.StockUpdateQueue;
 import rechard.learn.eshop.domain.Account;
 import rechard.learn.eshop.domain.CommodityDo;
 import rechard.learn.eshop.domain.CustomerDo;
@@ -32,7 +34,11 @@ public class MainWithFactory {
         /**
          * 模拟客户rechard下了个iphone6的订单
          */
+        //OfflineMessageStorageMananger offlineMessageStorageMananger=MockSpringContext.offlineMessageStorageMananger;
+        //StockUpdateQueue queue=MockSpringContext.stockUpdateQueue;
+
         new StockUpdateQueueConsumer().start();
+
         OrderDto order = mockDataFromCustomer();
         InventoryService service=new InventoryService();
         service.informCustomerSubmitOrder(order);

@@ -10,9 +10,10 @@ import java.util.concurrent.ArrayBlockingQueue;
 public class StockUpdateQueue {
     private int maxLen=10; //最大深度默认是10
 
-    ArrayBlockingQueue<StockUpdateMessage> queue=new ArrayBlockingQueue(maxLen);
-    OfflineMessageStorageMananger offlineMessageStorageMananger= MockSpringContext.offlineMessageStorageMananger;
-
+    private ArrayBlockingQueue<StockUpdateMessage> queue=new ArrayBlockingQueue(maxLen);
+    private OfflineMessageStorageMananger offlineMessageStorageMananger=MockSpringContext.offlineMessageStorageMananger;
+    public StockUpdateQueue(){
+    }
     public void putDirect(StockUpdateMessage stockUpdateMessage){
         queue.add(stockUpdateMessage);
     }

@@ -18,6 +18,7 @@ public class InventoryService {
 
     StockMessageManager messageManager=MockSpringContext.stockMessageManager;
     StockUpdateObserver stockUpdateObserver=MockSpringContext.stockUpdateObserver;
+    StockUpdateQueue queue=MockSpringContext.stockUpdateQueue;
     /**
      * 通知 库存中心 “客户下订单” 事件
      */
@@ -28,7 +29,7 @@ public class InventoryService {
         stockUpdater.update();
 
         //发送异步消息到queue里通知WMS
-        StockUpdateQueue queue=MockSpringContext.stockUpdateQueue;
+
         StockUpdateMessage msg=new StockUpdateMessage();
         msg.setAction(StockUpdateMessage.ACTION_SUBMITORDER);
         msg.setId(MyRandom.random());
