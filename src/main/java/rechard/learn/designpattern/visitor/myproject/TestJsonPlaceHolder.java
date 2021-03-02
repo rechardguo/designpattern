@@ -1,4 +1,4 @@
-package rechard.learn.degsinpattern;
+package rechard.learn.designpattern.visitor.myproject;
 
 
 import com.alibaba.fastjson.JSONObject;

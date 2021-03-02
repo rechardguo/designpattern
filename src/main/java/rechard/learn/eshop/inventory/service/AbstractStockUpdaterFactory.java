@@ -1,4 +1,4 @@
-package rechard.learn.inventory.service;
+package rechard.learn.eshop.inventory.service;
 
 import rechard.learn.data.mock.MockInventoryDB;
 import rechard.learn.inventory.domain.StockDo;

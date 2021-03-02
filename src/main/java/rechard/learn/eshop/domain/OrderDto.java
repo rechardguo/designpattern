@@ -1,4 +1,4 @@
-package rechard.learn.customer.domain;
+package rechard.learn.eshop.domain;
 
 /**
  * 订单dto

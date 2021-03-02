@@ -1,4 +1,4 @@
-package rechard.learn.inventory.service;
+package rechard.learn.eshop.inventory.service;
 
 /**
  * stock更新Command类

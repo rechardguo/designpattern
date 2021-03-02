@@ -1,4 +1,4 @@
-package rechard.learn.inventory.service;
+package rechard.learn.eshop.inventory.service;
 
 import rechard.learn.purchase.domain.PurchaseDto;
 import rechard.learn.inventory.domain.StockDo;

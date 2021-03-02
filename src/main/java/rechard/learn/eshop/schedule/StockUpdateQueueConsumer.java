@@ -1,4 +1,4 @@
-package rechard.learn.schedule;
+package rechard.learn.eshop.schedule;
 
 import rechard.learn.asyn.StockMessageManager;
 import rechard.learn.asyn.StockUpdateObservable;

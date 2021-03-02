@@ -1,4 +1,4 @@
-package rechard.learn.inventory.domain;
+package rechard.learn.eshop.inventory.domain;
 
 import java.util.Date;
 

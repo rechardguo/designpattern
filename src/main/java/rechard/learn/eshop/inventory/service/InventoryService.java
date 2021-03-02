@@ -1,4 +1,4 @@
-package rechard.learn.inventory.service;
+package rechard.learn.eshop.inventory.service;
 
 import rechard.learn.asyn.StockMessageManager;
 import rechard.learn.asyn.StockUpdateObservable;

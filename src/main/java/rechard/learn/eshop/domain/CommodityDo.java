@@ -1,4 +1,4 @@
-package rechard.learn.commodity.domain;
+package rechard.learn.eshop.domain;
 
 /**
  * 商品

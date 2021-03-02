@@ -1,4 +1,4 @@
-package rechard.learn.degsinpattern.factory;
+package rechard.learn.eshop.degsinpattern.factory;
 
 import rechard.learn.auth.domain.Account;
 import rechard.learn.commodity.domain.CommodityDo;

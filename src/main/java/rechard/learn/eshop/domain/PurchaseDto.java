@@ -1,4 +1,4 @@
-package rechard.learn.purchase.domain;
+package rechard.learn.eshop.domain;
 
 public class PurchaseDto {
     //采购专员id

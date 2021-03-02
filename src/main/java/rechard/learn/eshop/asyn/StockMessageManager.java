@@ -1,4 +1,4 @@
-package rechard.learn.asyn;
+package rechard.learn.eshop.asyn;
 
 import java.util.HashMap;
 import java.util.Map;

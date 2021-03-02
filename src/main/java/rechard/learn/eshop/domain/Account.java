@@ -1,4 +1,4 @@
-package rechard.learn.auth.domain;
+package rechard.learn.eshop.domain;
 
 /**
  *  系统用户的账号

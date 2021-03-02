@@ -1,4 +1,4 @@
-package rechard.learn.asyn;
+package rechard.learn.eshop.asyn;
 
 import rechard.learn.asyn.domain.StockUpdateMessage;
 import rechard.learn.data.mock.MockSpringContext;
@@ -19,11 +19,10 @@ public class OfflineResumeThread extends Thread{
         Iterator<List<StockUpdateMessage>> it=offlineMessageStorageMananger.iterator();
         while (it.hasNext()){
             List<StockUpdateMessage> list=it.next();
-            for (StockUpdateMessage msg:list) {
-                stockUpdateQueue.add(msg);
-            }
+            stockUpdateQueue.
         }
-        //处理完所有的离线消息后，flag标成false
+
+        //处理完所有的离线消息后，就想flag标成false
         offlineMessageStorageMananger.setOffline(false);
     }
 }

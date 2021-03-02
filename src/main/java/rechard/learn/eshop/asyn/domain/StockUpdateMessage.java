@@ -1,4 +1,4 @@
-package rechard.learn.asyn.domain;
+package rechard.learn.eshop.asyn.domain;
 
 /**
  * 通知WMS的库存更新消息

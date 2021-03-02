@@ -1,4 +1,4 @@
-package rechard.learn.data.mock;
+package rechard.learn.eshop.mock;
 
 import rechard.learn.auth.domain.Account;
 import rechard.learn.commodity.domain.CommodityDo;

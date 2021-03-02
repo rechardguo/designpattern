@@ -1,4 +1,4 @@
-package rechard.learn.data.mock;
+package rechard.learn.eshop.mock;
 
 import rechard.learn.asyn.OfflineMessageStorageMananger;
 import rechard.learn.asyn.StockMessageManager;

@@ -1,4 +1,4 @@
-package rechard.learn.customer.domain;
+package rechard.learn.eshop.domain;
 
 /**
  * 客户下订单的Order对象

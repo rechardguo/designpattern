@@ -1,4 +1,4 @@
-package rechard.learn.asyn;
+package rechard.learn.eshop.asyn;
 
 import rechard.learn.asyn.domain.StockUpdateMessage;
 import rechard.learn.data.mock.MockSpringContext;
