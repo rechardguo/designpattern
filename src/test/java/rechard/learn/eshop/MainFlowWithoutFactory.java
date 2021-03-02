@@ -1,23 +1,22 @@
-package rechard.learn.eshop.degsinpattern.factory;
+package rechard.learn.eshop;
 
-import rechard.learn.auth.domain.Account;
-import rechard.learn.commodity.domain.CommodityDo;
-import rechard.learn.customer.domain.CustomerDo;
-import rechard.learn.customer.domain.OrderDto;
-import rechard.learn.data.mock.MockData;
-import rechard.learn.inventory.domain.StockDo;
-import rechard.learn.inventory.service.PurchaseInputStockUpdater;
-import rechard.learn.inventory.service.StockUpdater;
-import rechard.learn.inventory.service.SubmitOrderStockUpdater;
-import rechard.learn.purchase.domain.PurchaseDto;
+import rechard.learn.eshop.domain.CommodityDo;
+import rechard.learn.eshop.domain.CustomerDo;
+import rechard.learn.eshop.domain.OrderDto;
+import rechard.learn.eshop.domain.PurchaseDto;
+import rechard.learn.eshop.inventory.domain.StockDo;
+import rechard.learn.eshop.inventory.service.PurchaseInputStockUpdater;
+import rechard.learn.eshop.inventory.service.StockUpdater;
+import rechard.learn.eshop.inventory.service.SubmitOrderStockUpdater;
+import rechard.learn.eshop.mock.MockData;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static rechard.learn.data.mock.MockCommodityDB.mockIphone6;
-import static rechard.learn.data.mock.MockCommodityDB.mockIphone7;
-import static rechard.learn.data.mock.MockCustomerDB.mockCustomerRechard;
-import static rechard.learn.data.mock.MockData.mockDataFromPurchaseCenter;
+import static rechard.learn.eshop.mock.MockCommodityDB.mockIphone6;
+import static rechard.learn.eshop.mock.MockCustomerDB.mockCustomerRechard;
+import static rechard.learn.eshop.mock.MockData.mockDataFromPurchaseCenter;
+
 
 /**
  * 如果没有工厂方法，那封装的具体的Command的逻辑就放到了具体的类

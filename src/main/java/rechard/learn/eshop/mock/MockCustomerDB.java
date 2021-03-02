@@ -1,6 +1,7 @@
 package rechard.learn.eshop.mock;
 
-import rechard.learn.customer.domain.CustomerDo;
+
+import rechard.learn.eshop.domain.CustomerDo;
 
 /**
  * 模拟客户数据库表

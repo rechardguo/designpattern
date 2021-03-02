@@ -1,6 +1,7 @@
 package rechard.learn.eshop.mock;
 
-import rechard.learn.auth.domain.Account;
+
+import rechard.learn.eshop.domain.Account;
 
 /**
  * 模拟Auth的数据库表

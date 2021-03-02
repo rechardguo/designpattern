@@ -1,8 +1,8 @@
 package rechard.learn.eshop.asyn;
 
 
-import rechard.learn.asyn.domain.StockUpdateMessage;
-import rechard.learn.data.mock.MockoffilineStockUpdateMsgStorageDB;
+import rechard.learn.eshop.asyn.domain.StockUpdateMessage;
+import rechard.learn.eshop.mock.MockoffilineStockUpdateMsgStorageDB;
 
 import java.util.ArrayList;
 import java.util.Iterator;

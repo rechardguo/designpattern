@@ -1,10 +1,10 @@
 package rechard.learn.eshop.mock;
 
-import rechard.learn.asyn.OfflineMessageStorageMananger;
-import rechard.learn.asyn.StockMessageManager;
-import rechard.learn.asyn.StockUpdateObserver;
-import rechard.learn.asyn.StockUpdateQueue;
-import rechard.learn.inventory.service.SubmitOrderStockUpdaterFactory;
+import rechard.learn.eshop.asyn.OfflineMessageStorageMananger;
+import rechard.learn.eshop.asyn.StockMessageManager;
+import rechard.learn.eshop.asyn.StockUpdateObserver;
+import rechard.learn.eshop.asyn.StockUpdateQueue;
+import rechard.learn.eshop.inventory.service.SubmitOrderStockUpdaterFactory;
 
 public class MockSpringContext {
     public static StockUpdateQueue stockUpdateQueue=new StockUpdateQueue();

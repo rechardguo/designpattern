@@ -1,19 +1,16 @@
 package rechard.learn.eshop.mock;
 
-import rechard.learn.auth.domain.Account;
-import rechard.learn.commodity.domain.CommodityDo;
-import rechard.learn.customer.domain.CustomerDo;
-import rechard.learn.customer.domain.OrderDto;
-import rechard.learn.purchase.domain.PurchaseDto;
+
+import rechard.learn.eshop.domain.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
-import static rechard.learn.data.mock.MockAuthDB.mockPurchaserLucy;
-import static rechard.learn.data.mock.MockCommodityDB.mockIphone6;
-import static rechard.learn.data.mock.MockCommodityDB.mockIphone7;
-import static rechard.learn.data.mock.MockCustomerDB.mockCustomerRechard;
+import static rechard.learn.eshop.mock.MockAuthDB.mockPurchaserLucy;
+import static rechard.learn.eshop.mock.MockCommodityDB.mockIphone6;
+import static rechard.learn.eshop.mock.MockCommodityDB.mockIphone7;
+import static rechard.learn.eshop.mock.MockCustomerDB.mockCustomerRechard;
+
 
 /**
  * 为了简化不写那些mapper,controller而又能写代码而编写的mock数据
@@ -28,7 +25,7 @@ public class MockData {
      * @param commodityList 商品列表
      * @return 采购列表
      */
-    public static List<PurchaseDto> mockPurchaseCommodity(Account purchaser,List<CommodityDo> commodityList){
+    public static List<PurchaseDto> mockPurchaseCommodity(Account purchaser, List<CommodityDo> commodityList){
         List<PurchaseDto> list=new ArrayList<PurchaseDto>();
         for (CommodityDo commodity:commodityList){
             PurchaseDto purchaseDto=new PurchaseDto();
@@ -49,7 +46,7 @@ public class MockData {
      * @param commodity
      * @return
      */
-    public static OrderDto mockSumitOrder(CustomerDo customer,CommodityDo commodity){
+    public static OrderDto mockSumitOrder(CustomerDo customer, CommodityDo commodity){
         OrderDto orderDto=new OrderDto();
 
         orderDto.setCustomerId(customer.getId());

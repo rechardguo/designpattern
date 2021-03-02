@@ -1,25 +1,25 @@
-package rechard.learn.eshop.degsinpattern.factory;
+package rechard.learn.eshop;
 
-import rechard.learn.auth.domain.Account;
-import rechard.learn.commodity.domain.CommodityDo;
-import rechard.learn.customer.domain.CustomerDo;
-import rechard.learn.customer.domain.OrderDto;
-import rechard.learn.data.mock.*;
-import rechard.learn.inventory.service.InventoryService;
-import rechard.learn.inventory.service.PurchaseInputStockUpdaterFactory;
-import rechard.learn.inventory.service.StockUpdater;
-import rechard.learn.inventory.service.SubmitOrderStockUpdaterFactory;
-import rechard.learn.purchase.domain.PurchaseDto;
-import rechard.learn.schedule.StockUpdateQueueConsumer;
+import rechard.learn.eshop.domain.Account;
+import rechard.learn.eshop.domain.CommodityDo;
+import rechard.learn.eshop.domain.CustomerDo;
+import rechard.learn.eshop.domain.OrderDto;
+import rechard.learn.eshop.mock.*;
+import rechard.learn.eshop.inventory.service.InventoryService;
+import rechard.learn.eshop.inventory.service.PurchaseInputStockUpdaterFactory;
+import rechard.learn.eshop.inventory.service.StockUpdater;
+import rechard.learn.eshop.inventory.service.SubmitOrderStockUpdaterFactory;
+import rechard.learn.eshop.domain.PurchaseDto;
+import rechard.learn.eshop.schedule.StockUpdateQueueConsumer;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static rechard.learn.data.mock.MockAuthDB.mockPurchaserLucy;
-import static rechard.learn.data.mock.MockCommodityDB.mockIphone6;
-import static rechard.learn.data.mock.MockCommodityDB.mockIphone7;
-import static rechard.learn.data.mock.MockData.mockDataFromCustomer;
-import static rechard.learn.data.mock.MockData.mockDataFromPurchaseCenter;
+import static rechard.learn.eshop.mock.MockAuthDB.mockPurchaserLucy;
+import static rechard.learn.eshop.mock.MockCommodityDB.mockIphone6;
+import static rechard.learn.eshop.mock.MockCommodityDB.mockIphone7;
+import static rechard.learn.eshop.mock.MockData.mockDataFromCustomer;
+import static rechard.learn.eshop.mock.MockData.mockDataFromPurchaseCenter;
 
 
 /**

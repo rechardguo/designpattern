@@ -1,7 +1,7 @@
 package rechard.learn.eshop.inventory.service;
 
-import rechard.learn.data.mock.MockInventoryDB;
-import rechard.learn.inventory.domain.StockDo;
+import rechard.learn.eshop.inventory.domain.StockDo;
+import rechard.learn.eshop.mock.MockInventoryDB;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,7 +43,7 @@ public abstract  class AbstractStockUpdaterFactory<T> implements StockUpdaterFac
         List<StockDo> list=new ArrayList<StockDo>();
         //这里模拟根据skuIds从数据库里查出StockDo集合或先插入不存在的StockDo
         for(Integer skuId:skuIds){
-            StockDo stockDo=MockInventoryDB.findBySkuId(skuId);
+            StockDo stockDo= MockInventoryDB.findBySkuId(skuId);
             list.add(stockDo);
         }
         return list;

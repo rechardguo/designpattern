@@ -1,7 +1,7 @@
 package rechard.learn.eshop.inventory.service;
 
-import rechard.learn.purchase.domain.PurchaseDto;
-import rechard.learn.inventory.domain.StockDo;
+import rechard.learn.eshop.domain.PurchaseDto;
+import rechard.learn.eshop.inventory.domain.StockDo;
 
 import java.util.ArrayList;
 import java.util.List;

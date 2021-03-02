@@ -1,7 +1,7 @@
 package rechard.learn.eshop.inventory.service;
 
-import rechard.learn.inventory.constant.StockStatus;
-import rechard.learn.inventory.domain.StockDo;
+import rechard.learn.eshop.inventory.constant.StockStatus;
+import rechard.learn.eshop.inventory.domain.StockDo;
 
 import java.util.Date;
 import java.util.List;

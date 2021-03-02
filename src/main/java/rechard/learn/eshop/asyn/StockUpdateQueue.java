@@ -1,8 +1,8 @@
 package rechard.learn.eshop.asyn;
 
-import rechard.learn.asyn.domain.StockUpdateMessage;
-import rechard.learn.data.mock.MockSpringContext;
-import rechard.learn.data.mock.MockoffilineStockUpdateMsgStorageDB;
+import rechard.learn.eshop.asyn.domain.StockUpdateMessage;
+import rechard.learn.eshop.mock.MockSpringContext;
+import rechard.learn.eshop.mock.MockoffilineStockUpdateMsgStorageDB;
 
 import java.util.List;
 import java.util.concurrent.ArrayBlockingQueue;
@@ -11,7 +11,7 @@ public class StockUpdateQueue {
     private int maxLen=10; //最大深度默认是10
 
     ArrayBlockingQueue<StockUpdateMessage> queue=new ArrayBlockingQueue(maxLen);
-    OfflineMessageStorageMananger offlineMessageStorageMananger=MockSpringContext.offlineMessageStorageMananger;
+    OfflineMessageStorageMananger offlineMessageStorageMananger= MockSpringContext.offlineMessageStorageMananger;
 
     public void putDirect(StockUpdateMessage stockUpdateMessage){
         queue.add(stockUpdateMessage);

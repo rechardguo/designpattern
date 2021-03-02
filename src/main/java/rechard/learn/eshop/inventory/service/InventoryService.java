@@ -1,13 +1,13 @@
 package rechard.learn.eshop.inventory.service;
 
-import rechard.learn.asyn.StockMessageManager;
-import rechard.learn.asyn.StockUpdateObservable;
-import rechard.learn.asyn.StockUpdateObserver;
-import rechard.learn.asyn.domain.StockUpdateMessage;
-import rechard.learn.asyn.StockUpdateQueue;
-import rechard.learn.customer.domain.OrderDto;
-import rechard.learn.data.mock.MockSpringContext;
-import rechard.learn.data.mock.MyRandom;
+import rechard.learn.eshop.asyn.StockMessageManager;
+import rechard.learn.eshop.asyn.StockUpdateObservable;
+import rechard.learn.eshop.asyn.StockUpdateObserver;
+import rechard.learn.eshop.asyn.domain.StockUpdateMessage;
+import rechard.learn.eshop.asyn.StockUpdateQueue;
+import rechard.learn.eshop.domain.OrderDto;
+import rechard.learn.eshop.mock.MockSpringContext;
+import rechard.learn.eshop.mock.MyRandom;
 
 import java.util.Observable;
 

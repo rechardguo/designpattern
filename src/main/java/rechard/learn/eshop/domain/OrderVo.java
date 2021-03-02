@@ -3,12 +3,12 @@ package rechard.learn.eshop.domain;
 /**
  * 客户下订单的Order对象
  */
-public class Order {
+public class OrderVo {
 
     private int id;
-    private String customerName;
-    private String customerId;
     private int skuId;
+    private String customerName;
+    private int customerId;
 
     public int getId() {
         return id;
@@ -26,11 +26,11 @@ public class Order {
         this.customerName = customerName;
     }
 
-    public String getCustomerId() {
+    public int getCustomerId() {
         return customerId;
     }
 
-    public void setCustomerId(String customerId) {
+    public void setCustomerId(int customerId) {
         this.customerId = customerId;
     }
 

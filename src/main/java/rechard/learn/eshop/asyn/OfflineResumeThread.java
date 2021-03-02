@@ -1,8 +1,7 @@
 package rechard.learn.eshop.asyn;
 
-import rechard.learn.asyn.domain.StockUpdateMessage;
-import rechard.learn.data.mock.MockSpringContext;
-import rechard.learn.data.mock.MockoffilineStockUpdateMsgStorageDB;
+import rechard.learn.eshop.asyn.domain.StockUpdateMessage;
+import rechard.learn.eshop.mock.MockSpringContext;
 
 import java.util.Iterator;
 import java.util.List;
@@ -19,7 +18,6 @@ public class OfflineResumeThread extends Thread{
         Iterator<List<StockUpdateMessage>> it=offlineMessageStorageMananger.iterator();
         while (it.hasNext()){
             List<StockUpdateMessage> list=it.next();
-            stockUpdateQueue.
         }
 
         //处理完所有的离线消息后，就想flag标成false
