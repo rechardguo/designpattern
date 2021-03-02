@@ -59,4 +59,16 @@ public class OrderDto {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
+    @Override
+    public String toString() {
+        return "OrderDto{" +
+                "customerId=" + customerId +
+                ", customerName='" + customerName + '\'' +
+                ", skuId=" + skuId +
+                ", skuName='" + skuName + '\'' +
+                ", orderId=" + orderId +
+                ", quantity=" + quantity +
+                '}';
+    }
 }

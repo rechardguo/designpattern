@@ -41,4 +41,14 @@ public class OrderVo {
     public void setSkuId(int skuId) {
         this.skuId = skuId;
     }
+
+    @Override
+    public String toString() {
+        return "OrderVo{" +
+                "id=" + id +
+                ", skuId=" + skuId +
+                ", customerName='" + customerName + '\'' +
+                ", customerId=" + customerId +
+                '}';
+    }
 }
