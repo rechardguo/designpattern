@@ -1,6 +1,8 @@
 # 真实项目 eshop 中使用设计模式的代码
-
 所有的代码在package  `rechard.learn.eshop`里
+查看 
+#### [eshop](https://github.com/rechardguo/designpattern/tree/master/eshop.md)
+
 
 
 # 设计模式
