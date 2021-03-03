@@ -1,12 +1,9 @@
-package rechard.learn.eshop.domain;
+package rechard.learn.eshop.auth.domain;
 
-/**
- * 商品
- */
-public class CommodityDo {
+public class RoleDO {
     private int id;
-    private int skuId;
     private String name;
+    private String code;
 
     public int getId() {
         return id;
@@ -16,19 +13,19 @@ public class CommodityDo {
         this.id = id;
     }
 
-    public int getSkuId() {
-        return skuId;
-    }
-
-    public void setSkuId(int skuId) {
-        this.skuId = skuId;
-    }
-
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 }

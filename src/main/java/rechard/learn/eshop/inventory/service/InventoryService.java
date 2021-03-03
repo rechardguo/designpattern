@@ -8,17 +8,19 @@ import rechard.learn.eshop.asyn.StockUpdateQueue;
 import rechard.learn.eshop.domain.OrderDto;
 import rechard.learn.eshop.mock.MockSpringContext;
 import rechard.learn.eshop.mock.MyRandom;
+import rechard.learn.eshop.mock.spring.Autowired;
 
 import java.util.Observable;
 
 public class InventoryService {
-
-    SubmitOrderStockUpdaterFactory submitOrderStockUpdaterFactory=
-            MockSpringContext.submitOrderStockUpdaterFactory;
-
-    StockMessageManager messageManager=MockSpringContext.stockMessageManager;
-    StockUpdateObserver stockUpdateObserver=MockSpringContext.stockUpdateObserver;
-    StockUpdateQueue queue=MockSpringContext.stockUpdateQueue;
+    @Autowired
+    SubmitOrderStockUpdaterFactory submitOrderStockUpdaterFactory;
+    @Autowired
+    StockMessageManager messageManager;
+    @Autowired
+    StockUpdateObserver stockUpdateObserver;
+    @Autowired
+    StockUpdateQueue queue;
     /**
      * 通知 库存中心 “客户下订单” 事件
      */

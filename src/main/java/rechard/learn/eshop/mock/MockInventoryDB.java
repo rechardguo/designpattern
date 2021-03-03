@@ -1,6 +1,6 @@
 package rechard.learn.eshop.mock;
 
-import rechard.learn.eshop.domain.CommodityDo;
+import rechard.learn.eshop.commodity.domain.CommodityDo;
 import rechard.learn.eshop.inventory.domain.StockDo;
 
 import java.util.ArrayList;

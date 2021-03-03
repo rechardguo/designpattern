@@ -1,27 +1,14 @@
 package rechard.learn.eshop;
 
-import rechard.learn.eshop.asyn.OfflineMessageStorageMananger;
+import rechard.learn.eshop.asyn.StockMessageManager;
 import rechard.learn.eshop.asyn.StockUpdateQueue;
-import rechard.learn.eshop.domain.Account;
-import rechard.learn.eshop.domain.CommodityDo;
-import rechard.learn.eshop.domain.CustomerDo;
 import rechard.learn.eshop.domain.OrderDto;
-import rechard.learn.eshop.mock.*;
 import rechard.learn.eshop.inventory.service.InventoryService;
-import rechard.learn.eshop.inventory.service.PurchaseInputStockUpdaterFactory;
-import rechard.learn.eshop.inventory.service.StockUpdater;
-import rechard.learn.eshop.inventory.service.SubmitOrderStockUpdaterFactory;
-import rechard.learn.eshop.domain.PurchaseDto;
+import rechard.learn.eshop.mock.MockSpringContext;
+import rechard.learn.eshop.mock.spring.Autowired;
 import rechard.learn.eshop.schedule.StockUpdateQueueConsumer;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import static rechard.learn.eshop.mock.MockAuthDB.mockPurchaserLucy;
-import static rechard.learn.eshop.mock.MockCommodityDB.mockIphone6;
-import static rechard.learn.eshop.mock.MockCommodityDB.mockIphone7;
 import static rechard.learn.eshop.mock.MockData.mockDataFromCustomer;
-import static rechard.learn.eshop.mock.MockData.mockDataFromPurchaseCenter;
 
 
 /**
@@ -37,10 +24,11 @@ public class MainWithFactory {
         //OfflineMessageStorageMananger offlineMessageStorageMananger=MockSpringContext.offlineMessageStorageMananger;
         //StockUpdateQueue queue=MockSpringContext.stockUpdateQueue;
 
-        new StockUpdateQueueConsumer().start();
-
+        StockUpdateQueue queue=MockSpringContext.Default.get(StockUpdateQueue.class);
+        StockMessageManager stockMessageManager=MockSpringContext.Default.get(StockMessageManager.class);
+        new StockUpdateQueueConsumer(queue,stockMessageManager).start();
         OrderDto order = mockDataFromCustomer();
-        InventoryService service=new InventoryService();
+        InventoryService service= MockSpringContext.Default.get(InventoryService.class);
         service.informCustomerSubmitOrder(order);
         //System.out.println("========================================");
         /**

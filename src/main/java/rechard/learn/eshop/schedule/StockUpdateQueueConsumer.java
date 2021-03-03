@@ -6,13 +6,23 @@ import rechard.learn.eshop.asyn.StockUpdateQueue;
 import rechard.learn.eshop.asyn.domain.StockUpdateMessage;
 import rechard.learn.eshop.inventory.domain.StockDo;
 import rechard.learn.eshop.mock.MockSpringContext;
+import rechard.learn.eshop.mock.spring.Autowired;
 
 import java.util.Observable;
 
 public class StockUpdateQueueConsumer extends Thread{
+    @Autowired
+    private StockUpdateQueue queue;
+    @Autowired
+    private StockMessageManager stockMessageManager;
 
-    private StockUpdateQueue queue= MockSpringContext.stockUpdateQueue;
-    private StockMessageManager stockMessageManager=MockSpringContext.stockMessageManager;
+    public StockUpdateQueueConsumer( StockUpdateQueue queue,
+                                     StockMessageManager stockMessageManager){
+        this.queue=queue;
+        this.stockMessageManager=stockMessageManager;
+    }
+
+
     public void run() {
         while (true){
 

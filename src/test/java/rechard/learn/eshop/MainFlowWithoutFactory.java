@@ -1,6 +1,6 @@
 package rechard.learn.eshop;
 
-import rechard.learn.eshop.domain.CommodityDo;
+import rechard.learn.eshop.commodity.domain.CommodityDo;
 import rechard.learn.eshop.domain.CustomerDo;
 import rechard.learn.eshop.domain.OrderDto;
 import rechard.learn.eshop.domain.PurchaseDto;

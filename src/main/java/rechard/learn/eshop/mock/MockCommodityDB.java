@@ -1,7 +1,7 @@
 package rechard.learn.eshop.mock;
 
 
-import rechard.learn.eshop.domain.CommodityDo;
+import rechard.learn.eshop.commodity.domain.CommodityDo;
 
 /**
  * 模拟商品中心的数据库表

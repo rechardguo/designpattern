@@ -1,8 +1,8 @@
 package rechard.learn.eshop.mock.spring;
 
 public class Cat{
-
-    Mouse food=(Mouse)Context.get(Mouse.class);
+    @Autowired
+    public Mouse food;
 
     @Override
     public String toString() {

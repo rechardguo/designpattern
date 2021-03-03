@@ -1,7 +1,8 @@
 package rechard.learn.eshop.mock.spring;
 
 public class Mouse {
-    Cat hunter=(Cat)Context.get(Cat.class);
+    @Autowired
+    Cat hunter;
 
     @Override
     public String toString() {
