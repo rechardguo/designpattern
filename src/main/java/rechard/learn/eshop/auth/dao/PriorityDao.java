@@ -1,12 +1,18 @@
 package rechard.learn.eshop.auth.dao;
 
 import rechard.learn.eshop.auth.domain.Priority;
+import rechard.learn.eshop.auth.domain.PriorityDO;
+import rechard.learn.eshop.mock.MockAuthDB;
+import rechard.learn.eshop.mock.spring.Autowired;
 
 import java.util.List;
 
 public class PriorityDao {
 
-    public List<Priority> findPriorityChildren(int id){
+    @Autowired
+    MockAuthDB mockAuthDB;
+
+    public List<PriorityDO> findPriorityChildren(int id){
         return null;
     }
 
@@ -17,7 +23,8 @@ public class PriorityDao {
     public void delete(int id) {
     }
 
-    public Priority findPriority(int priorityId) {
-      return null;
+    public PriorityDO findPriority(int priorityId) {
+      PriorityDO priorityDO=mockAuthDB.table_Priority.get(priorityId);
+      return priorityDO;
     }
 }

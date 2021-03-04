@@ -11,5 +11,5 @@ public interface PriorityOperation<T> {
     * 处理priority
     * @param priority
     */
-   T execute(Priority priority);
+   T execute(Priority priority) throws Exception;
 }

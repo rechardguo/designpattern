@@ -1,6 +1,6 @@
 package rechard.learn.eshop.auth.domain;
 
-public class AccountPriorityRelationshipDO {
+public class AccountPriorityDO {
 
     private int id;
     //角色id

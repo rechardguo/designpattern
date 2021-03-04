@@ -3,7 +3,7 @@ package rechard.learn.eshop.auth.domain;
 /**
  * 角色和权限之间的关系类
  */
-public class RolePriorityRelationshipDO {
+public class RolePriorityDO {
         private int id;
         //角色id
         private int roleId;

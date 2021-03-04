@@ -33,9 +33,10 @@ public class AbstractObject {
      * @param t 目标对象
      * @param <T> 目标对象Class
      */
-    public<T> void clone(Class<T> t) throws Exception {
+    public<T> T clone(Class<T> t) throws Exception {
         T target=t.newInstance();
         BeanCopierUtils.copy(this,target);
+        return target;
     }
 
     public<T> void clone(T t,int direction) throws Exception{

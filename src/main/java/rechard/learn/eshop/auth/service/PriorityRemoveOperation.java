@@ -23,15 +23,18 @@ public class PriorityRemoveOperation extends AbstractPriorityOperation<Boolean> 
      * @param priority
      * @return
      */
-    protected Boolean doExecute(Priority priority) {
+    protected Boolean doExecute(Priority priority) throws Exception {
         //先处理孩子结点
-        List<Priority> children=priority.getChildren();
+        /*List<Priority> children=priority.getChildren();
         if(children!=null && !children.isEmpty()){
             for(Priority ch:children){
                 ch.operate(this);
             }
-        }
-        //最后处理自己
+        }*/
+
+        //实际上不需要调用上面的，因为在AbstractPriorityOperation已经深度优先了
+        //也就是说保证了传入的priority就是叶子结点
+        //既然是叶子结点，直接删除就好了
         priorityDao.delete(priority.getId());
         return true;
     }

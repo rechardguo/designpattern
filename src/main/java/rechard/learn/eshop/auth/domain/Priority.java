@@ -14,7 +14,7 @@ public class Priority {
 
     //传入一个 visitor对象，命名叫PriorityOperation
     //由PriorityOperation来处理
-    public void operate(PriorityOperation operation){
+    public void operate(PriorityOperation operation) throws Exception {
         operation.execute(this);
     }
 

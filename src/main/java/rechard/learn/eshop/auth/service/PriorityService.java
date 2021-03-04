@@ -4,7 +4,9 @@ import rechard.learn.eshop.auth.dao.AccountPriorityDao;
 import rechard.learn.eshop.auth.dao.PriorityDao;
 import rechard.learn.eshop.auth.dao.RolePriorityDao;
 import rechard.learn.eshop.auth.domain.Priority;
+import rechard.learn.eshop.auth.domain.PriorityDO;
 import rechard.learn.eshop.mock.spring.Autowired;
+import rechard.learn.eshop.utils.BeanCopierUtils;
 
 public class PriorityService {
     @Autowired
@@ -13,12 +15,20 @@ public class PriorityService {
     RolePriorityDao rolePriorityDao;
     @Autowired
     PriorityDao priorityDao;
+
+    public Priority findByPriorityId(int priorityId){
+        PriorityDO priorityDO=priorityDao.findPriority(priorityId);
+        Priority priority=new Priority();
+        BeanCopierUtils.copy(priorityDO,priority);
+        return priority;
+    }
+
     /**
      * 删除某个权限
      * @param priorityId 权限id
      */
     public void remove(int priorityId) throws Exception {
-        Priority priority=priorityDao.findPriority(priorityId);
+        Priority priority=findByPriorityId(priorityId);
 
         PriorityOperation<Boolean> priorityRelatedOperation
                 =new PriorityRelatedOperation(accountPriorityDao,rolePriorityDao);

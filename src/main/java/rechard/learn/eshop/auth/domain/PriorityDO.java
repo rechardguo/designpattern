@@ -1,6 +1,8 @@
 package rechard.learn.eshop.auth.domain;
 
-public class PriorityDO {
+import rechard.learn.eshop.utils.AbstractObject;
+
+public class PriorityDO extends AbstractObject {
 
     private int id;
     private int pid;

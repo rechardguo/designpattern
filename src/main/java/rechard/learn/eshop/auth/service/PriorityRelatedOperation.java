@@ -3,7 +3,6 @@ package rechard.learn.eshop.auth.service;
 import rechard.learn.eshop.auth.dao.AccountPriorityDao;
 import rechard.learn.eshop.auth.dao.RolePriorityDao;
 import rechard.learn.eshop.auth.domain.Priority;
-import rechard.learn.eshop.auth.domain.RolePriorityRelationshipDO;
 import rechard.learn.eshop.mock.spring.Autowired;
 
 /**

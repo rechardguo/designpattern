@@ -1,6 +1,7 @@
 package rechard.learn.eshop.mock;
 
 
+import rechard.learn.eshop.auth.domain.AccountDO;
 import rechard.learn.eshop.commodity.domain.CommodityDo;
 import rechard.learn.eshop.domain.*;
 
@@ -26,12 +27,12 @@ public class MockData {
      * @param commodityList 商品列表
      * @return 采购列表
      */
-    public static List<PurchaseDto> mockPurchaseCommodity(Account purchaser, List<CommodityDo> commodityList){
+    public static List<PurchaseDto> mockPurchaseCommodity(AccountDO purchaser, List<CommodityDo> commodityList){
         List<PurchaseDto> list=new ArrayList<PurchaseDto>();
         for (CommodityDo commodity:commodityList){
             PurchaseDto purchaseDto=new PurchaseDto();
             purchaseDto.setPurchaserId(purchaser.getId());
-            purchaseDto.setPurchaserName(purchaser.getName());
+            purchaseDto.setPurchaserName(purchaser.getEmployName());
             purchaseDto.setSkuId(commodity.getSkuId());
             purchaseDto.setPurchaserName("iphone6");
             purchaseDto.setPurchaserId(commodity.getId());
@@ -76,7 +77,7 @@ public class MockData {
      * @return
      */
     public static List<PurchaseDto> mockDataFromPurchaseCenter() {
-        Account lucy= mockPurchaserLucy();
+        AccountDO lucy= mockPurchaserLucy();
         CommodityDo purchaseIphone6=mockIphone6();
         CommodityDo purchaseIphone7=mockIphone7();
         List<CommodityDo> commodityList=new ArrayList();
