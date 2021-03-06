@@ -19,15 +19,58 @@ Java架构师训练营的大型电商项目
 3.3
 - [ ] 161_基于策略模式与抽象工厂模式完成订单价格计算功能
 
-1. 满减
-2. 多买
-3. 赠品促销
+订单里含有n个
 
-3.4
 
-- [ ] 164_基于访问者模式完成权限控制模块的代码编写
+促销策略
+1. 满减,满200减20 
+2. 多买,第2件半价
+3. 直接打折
+4. 赠品促销，但赠品需要计算运费
 
-- [ ] 165_基于享元模式实现权限数据的缓存与刷新
+> 该模式比较有用,平时自己难以想到，需要反复多体会几次
+
+```java
+//计算价格的工厂
+
+interface OrderPriceFactory{
+   public OrderPriceCalculator createOrderPriceCalculor
+
+
+}
+
+
+
+
+```
+
+
+- [X] 164_基于访问者模式完成权限控制模块的代码编写
+
+- [X] 165_基于享元模式实现权限数据的缓存与刷新
+
+对于用户的权限List<PriorityDO> 由2部分构成
+
+ 1. account_role查出role再从role查出priority
+ 2. account_priority 查出priority
+ ```java
+// key=userid
+// value=用户的所有的权限
+Map<long,List<PriorityDO>> userPrioritesCache=
+new ConcurrentHashMap();
+
+// key=userid_prirotycode 是否有缓存，这样就不用去遍历
+// userPrioritesCache来查找
+Map<String,boolean> userPriortyCodeCache=
+new ConcurrentHashMap();
+
+// key=userid_prirotyUrl 是否有缓存，这样就不用去遍历
+// userAuthorizationCache来查找
+Map<String,boolean> userPriorityUrlCache=
+new ConcurrentHashMap();
+ ```
+再在需要更新的地方去更新即可 
+这个模式比较简单，就没有写
 
 - [ ] 172_基于构造器模式完成销售出库单创建的代码编写
 
@@ -249,7 +292,7 @@ A-01-02(A排第1个货架第2层)
 
 ### 商品价格计算
 
-calculateOrderPrice 计算订单的价格
+
 订单的价格分成3部分
 1.总价格
 2.折扣价格
@@ -264,7 +307,8 @@ class OrderInfoDTO{
 从OderInfoDTO里 根据OrderItemDTO 从促销中心找到促销活动
 PromotionActivityDTO ，促销活动分成以下的5类
 
-满减促销
+这是促销的策略
+满减促销  
 单品促销
 多买优惠
 满赠促销

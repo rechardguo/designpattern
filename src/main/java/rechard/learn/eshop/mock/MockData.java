@@ -21,7 +21,6 @@ public class MockData {
 
 
 
-
     /**
      * @param purchaser 采购者的账号
      * @param commodityList 商品列表
