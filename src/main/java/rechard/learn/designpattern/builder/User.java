@@ -2,7 +2,7 @@ package rechard.learn.designpattern.builder;
 
 
 //利用inner class来建立建造者模式
-public class BuilderDemo {
+public class User {
 	
 	private int id;
     private String name;
@@ -10,9 +10,9 @@ public class BuilderDemo {
     private String sex;
     private String address;
     
-    public BuilderDemo(){}
+    public User(){}
     
-	public BuilderDemo(BuilderDemo target) {
+	public User(User target) {
 		this.id=target.getId();
 		this.name=target.getName();
 		this.passwd=target.getPasswd();
@@ -49,33 +49,50 @@ public class BuilderDemo {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	
-	public static class builder{		
-		private BuilderDemo target;
-		
-		public builder(){
-			target = new BuilderDemo();
+
+	@Override
+	public String toString() {
+		return "User{" +
+				"id=" + id +
+				", name='" + name + '\'' +
+				", passwd='" + passwd + '\'' +
+				", sex='" + sex + '\'' +
+				", address='" + address + '\'' +
+				'}';
+	}
+
+	public static class Builder{
+		private User target;
+
+		private Builder(){};
+
+		private Builder(User user){
+			this.target=user;
+		};
+
+		public static Builder newBuilder(){
+			return new Builder(new User());
 		}
 		
-		public builder setName(String name){
+		public Builder setName(String name){
 			target.setName(name);
 			return this;
 		}
 		
-		public builder setId(int id) {
+		public Builder setId(int id) {
 			target.setId(id);
 			return this;
 		}
 		
-		public BuilderDemo build(){
-			return new BuilderDemo(target);
+		public User build(){
+			return target;
 		}
 	}
 	
 	//建造者模式
 	public static void main(String[]args){
-		new BuilderDemo.builder().setName("ls").setId(1).build();
-		System.out.println(new BuilderDemo.builder() == new BuilderDemo.builder());
+		User user=User.Builder.newBuilder().setName("ls").setId(1).build();
+		System.out.println(user);
 	}
 	
 }
